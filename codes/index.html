@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHero Tube</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -12,13 +13,23 @@
 <body>
     <!-- header section  -->
     <header>
-        <nav class="w-11/12 mx-auto flex items-center justify-between border-b-2 border-gray-200 py-4 md:py-6">
+        <nav class="w-11/12 mx-auto flex items-center justify-between border-b-2 border-[#17171720] py-4 md:py-6">
             <div class="logo"><img class="w-26 md:w-44" src="./assets/Logo.png" alt=""></div>
-            <div class="sorts"><button class="btn border-none bg-[#25252533] md:text-lg">Sort By View</button></div>
-            <div class="blogs"><button class="btn text-white md:text-lg border-none bg-[#FF1F3D]">Blogs</button></div>
+            <div class="sorts"><button
+                    class="btn btn-sm md:btn border-none bg-[#25252533] hover:bg-[#FF1F3D] hover:text-white md:text-lg">Sort
+                    By
+                    View</button></div>
+            <div class="blogs"><button
+                    class="btn btn-sm md:btn text-white md:text-lg border-none bg-[#FF1F3D]">Blogs</button></div>
         </nav>
     </header>
-
+    <!-- all buttons  -->
+    <section id="category-container" class="flex py-4 md:py-6 gap-2 md:gap-4 justify-center items-center">
+        <div>
+            <button class="btn btn-sm border-none text-white bg-[#FF1F3D]"> All</button>
+        </div>
+    </section>
+    <script src="./script/app.js"></script>
 </body>
 
 </html>
