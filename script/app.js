@@ -24,9 +24,9 @@ loadCategories()
 
 
 // videos 
-const loadVideos = async () => {
+const loadVideos = async (searchText = '') => {
     try {
-        const response = await fetch('https://openapi.programming-hero.com/api/phero-tube/videos')
+        const response = await fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
         const data = await response.json()
         {
             removeActiveClass()
@@ -63,11 +63,11 @@ const displayVideos = (videos) => {
            </div>
             <div class="flex items-center gap-4 mt-3">
                 <img class="w-10 h-10 rounded-full" src="${video.authors[0]['profile_picture']}" alt="">
-                <h3 class="font-bold">Shape of You</h3>
+                <h3 class="font-bold">${video.title}</h3>
             </div>
             <div class="flex items-center gap-2 mx-auto pl-14">
                 <small class="text-sm text-[#171717B3]">${video.authors[0]['profile_name']}</small>
-                <img class="w-4" src="assets/verified.png" alt="">
+                <small class="w-4">${video.authors[0].verified == true ? ` <img src="./assets/verified.png" alt="">` : ``}</small>
             </div>
             <small class="pl-14 text-sm text-[#171717B3]">${video.others.views} Views</small>
             <button onclick="loadVideoDetails('${video.video_id}')" class="btn btn-block mt-3">Show Details</button>
@@ -114,7 +114,7 @@ const displayVideoDetails = (video) => {
            </div>
             <div class="flex items-center gap-4 mt-3">
                 <img class="w-10 h-10 rounded-full" src="${video.authors[0]['profile_picture']}" alt="">
-                <h3 class="font-bold">Shape of You</h3>
+                <h3 class="font-bold">${video.title}</h3>
             </div>
             <div class="flex items-center gap-2 mx-auto pl-14">
                 
@@ -124,3 +124,8 @@ const displayVideoDetails = (video) => {
         </div>
         `
 }
+
+document.getElementById('search-input').addEventListener('keyup', (e) => {
+    const input = e.target.value
+    loadVideos(input)
+})

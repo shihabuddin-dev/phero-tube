@@ -16,44 +16,49 @@
     <header>
         <nav class="container mx-auto flex items-center justify-between border-b-2 border-[#17171720] py-4 md:py-6">
             <div class="logo"><img class="w-26 md:w-40" src="./assets/Logo.png" alt=""></div>
-            <div class="sorts"><button
-                    class="btn btn-sm md:btn border-none bg-[#25252533] hover:bg-[#FF1F3D] hover:text-white md:text-lg">Sort
-                    By
-                    View</button></div>
-            <div class="blogs"><button
-                    class="btn btn-sm md:btn text-white md:text-lg border-none bg-[#FF1F3D]">Blogs</button></div>
+            <div class="sorts"><label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input id="search-input" type="search" required placeholder="Search" />
+                </label></div>
+            <div class="blogs"><button class="btn btn-sm md:btn text-white md:text-base border-none bg-[#FF1F3D]">Sort
+                    By View</button></div>
         </nav>
     </header>
     <!-- all buttons  -->
     <section id="category-container" class="flex py-4 md:py-6 gap-2 md:gap-4 justify-center items-center">
         <div>
-            <button id="btn-all" onclick="loadVideos()" class="btn btn-sm border-none bg-[#25252533] hover:text-white hover:bg-[#FF1F3D]"> All</button>
+            <button id="btn-all" onclick="loadVideos()"
+                class="btn btn-sm border-none bg-[#25252533] hover:text-white hover:bg-[#FF1F3D]"> All</button>
         </div>
     </section>
-    
+
 
     <!-- main section  -->
     <main id="video-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-2 container mx-auto">
 
-        
+
     </main>
 
-
-<!-- Open the modal using ID.showModal() method -->
-<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
-<dialog id="video_details" class="modal">
-  <div class="modal-box">
-    <div id="details-container">
-
-    </div>
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+    <dialog id="video_details" class="modal">
+        <div class="modal-box">
+            <div id="details-container">
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
     <script src="./script/app.js"></script>
 </body>
