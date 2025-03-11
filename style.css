@@ -3,3 +3,7 @@
 .inter-font {
     font-family: "Inter", sans-serif;
 }
+.active{
+    background: #FF1F3D;
+    color: white;
+}
