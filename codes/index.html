@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHero Tube</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="inter-font px-2">
     <!-- header section  -->
     <header>
-        <nav class="w-11/12 mx-auto flex items-center justify-between border-b-2 border-[#17171720] py-4 md:py-6">
-            <div class="logo"><img class="w-26 md:w-44" src="./assets/Logo.png" alt=""></div>
+        <nav class="container mx-auto flex items-center justify-between border-b-2 border-[#17171720] py-4 md:py-6">
+            <div class="logo"><img class="w-26 md:w-40" src="./assets/Logo.png" alt=""></div>
             <div class="sorts"><button
                     class="btn btn-sm md:btn border-none bg-[#25252533] hover:bg-[#FF1F3D] hover:text-white md:text-lg">Sort
                     By
@@ -29,6 +30,11 @@
             <button class="btn btn-sm border-none text-white bg-[#FF1F3D]"> All</button>
         </div>
     </section>
+
+    <!-- main section  -->
+    <main id="video-container" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-2 container mx-auto">
+
+    </main>
     <script src="./script/app.js"></script>
 </body>
 
