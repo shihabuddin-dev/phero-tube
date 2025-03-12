@@ -59,8 +59,8 @@ const displayVideos = (videos) => {
         <div>
            <div class="relative">
             <img class="rounded-md w-full h-[200px] object-cover" src="${video.thumbnail}" alt="">
-            <span class="absolute bottom-3 right-4 bg-black rounded-sm text-white text-sm px-1">${video.others['posted_date']}</span>
-           </div>
+            <span class="absolute bottom-3 right-4 bg-black rounded-sm text-white text-sm px-1">${video.others['posted_date']}</span >
+           </div >
             <div class="flex items-center gap-4 mt-3">
                 <img class="w-10 h-10 rounded-full" src="${video.authors[0]['profile_picture']}" alt="">
                 <h3 class="font-bold">${video.title}</h3>
@@ -71,9 +71,9 @@ const displayVideos = (videos) => {
             </div>
             <small class="pl-14 text-sm text-[#171717B3]">${video.others.views} Views</small>
             <button onclick="loadVideoDetails('${video.video_id}')" class="btn btn-block mt-3">Show Details</button>
-        </div>
-        
-        `
+        </div >
+
+    `
         videoContainer.appendChild(videoDiv)
     });
 }
@@ -129,3 +129,8 @@ document.getElementById('search-input').addEventListener('keyup', (e) => {
     const input = e.target.value
     loadVideos(input)
 })
+
+const showLoader = () => {
+    document.getElementById('loader').classList.remove('hidden')
+    document.getElementById('video-container').classList.add('hidden')
+}
